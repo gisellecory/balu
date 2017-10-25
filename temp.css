@@ -1,12 +1,3 @@
-
-align-items: center;
-
-
-
-/************************
-Responsive
-************************/
-
 /* *********
 Big
 ********** */
@@ -77,6 +68,3 @@ Big
     max-height:15vh;
     }
 }
-
-/* Mobile */
- @media(max-width:400px) {

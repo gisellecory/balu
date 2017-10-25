@@ -11,16 +11,23 @@ Remove default browser settings
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
 }
 
 /************************
 Read more options
 ************************/
 
+p, h1, h1, .navitem {
+font-family: 'Source Sans Pro', sans-serif;
+padding: 1%;
+}
+
+
 p {
   display: none;
-  padding: 1%;
 }
+
 
 /* eventually this should be mobile only */
 
@@ -56,11 +63,11 @@ Headers
 ************************/
 
 h1 {
-  margin: 2%;
-  color: rgb(43, 216, 197);
-  text-align: center;
-  font-family: monospace;
-  font-size: 2.5em;
+color: rgb(43, 216, 197);
+font-size: 1.5em;
+white-space: nowrap;
+overflow: hidden;
+width: 100%;
 }
 
 h2 {}
@@ -71,7 +78,6 @@ Paragraphs and other text
 
 p {
   text-align: justify;
-  font-family: monospace;
   font-size: 1.2em;
 }
 
@@ -82,6 +88,7 @@ p {
 
 .navitem {
   font-size: 1.5em;
+  font-weight: bold;
   /* why does this work? */
 }
 
@@ -171,25 +178,15 @@ body and containers
 body {
   width: 100vw;
   /*background-image: url("imagelib/pattern.png");*/
-  background-color: black;
-  overflow-x: hidden;
-}
-
-.container-l1, .l1, .container-l3, .l3 {
-  background-color: white;
-}
-
-.container-l2, .l2, .container-l4, .l4 {
   background-color: lightgrey;
+  overflow-x: hidden;
 }
 
 .container-overall, .container-l1, .container-l2, .container-l3, .container-l4, .container-master {
   display: flex;
-}
-
-.container-overall, .container-l1, .container-l2, .container-l3, .container-l4, .container-master {
   flex-direction: column;
 }
+
 
 div.container-overall {
   max-width: 95vw;
@@ -263,29 +260,16 @@ footer a:hover, footer a:active {
 }
 
 .container-master {
-  align-items:center;
+  background-color:white;
+  display:flex;
+  align-items: center;
+justify-content: center;
 }
 
 .feature-img {
-  position: absolute;
-  display: block;
-  max-height:90%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 25px;
-}
-
-/*
-.feature-img {
-  max-width: 80%;
-  max-height: 30vh;
   display: block;
   margin: auto;
-  border-radius: 5px;
 }
-*/
 
 /*
 div.image {
@@ -298,6 +282,7 @@ div.image {
 div.image
 {
   display:block;
+/*
   width:50%;
   position: relative;
   overflow: hidden;
@@ -322,7 +307,7 @@ div.text {
   max-height: 50vh;
   background-color: inherit;
   /* background-image: url("imagelib/pattern.png"); /* Make this a bit faded */
-  padding: 5px;
+  padding: 20px 5px 10px 5px; /* top right bottom left */
   max-width: 350px;
   margin: auto;
   display:flex;
@@ -331,14 +316,12 @@ div.text {
   }
 
 .navitem, .navitem a {
-  color: lightgrey;
+  color: rgb(43, 216, 197);
   text-decoration: none;
   font-size: 1.1em;
-  font-family: monospace;
   text-align: center;
   padding: 2px 1vw;
-  margin: 5px;
-  /* top and bottom, left and right */
+  margin: 5px; /* top and bottom, left and right */
   flex-direction: row;
 }
 
@@ -355,6 +338,11 @@ div.text {
 
 #icon {
   max-height: 7vh;
+}
+
+div.flex-box {
+  display:flex;
+  flex-direction:row;
 }
 
 /************************
@@ -384,14 +372,17 @@ div.text {
 
 @media(min-width:400px) {
   .fg-nav {
-  max-width:90vw;
+  /* max-width:90vw; */
 }
 .fg-nav, .nav-section {
-    flex-direction: row;
+    flex-direction: column;
 }
 .navitem, .navitem a {
 font-size: 1.2em;
+padding-top: 50px;
 }
+
+
 .header-banner {
 display:flex;
 /* temp fix while wait on header image */
@@ -401,8 +392,11 @@ background:rgb(43, 216, 197);
 background-image: url("imagelib/pattern.png");
 background-repeat:repeat-x;
 background-position: left;
-background-size:30%
+background-size:30%;
 margin:10px 0px 10px 0px;
+}
+div.container-overall {
+  margin:10px 10px 10px 10px;
 }
 
 }
@@ -431,10 +425,11 @@ div.container-overall {
 }
 
 @media(min-width:750px) {
-  .container-master {
+  div.container-master {
     padding: 0px 20px 0px 20px; /* top right bottom left */
     /* this bit is unncessary at the mo */
     align-items:flex-start;
+    margin:20px 40px;
   }
 
 .aside {
@@ -447,9 +442,8 @@ div.container-overall {
 }
 
 @media(min-width:900px) {
-/* Move images to the side */
 .container-l1, .container-l2, .container-l3 {
-  flex-direction: row;
+  flex-direction: column; /* Move images to the side if have row entered */
 }
 div.text {
   order: 0;

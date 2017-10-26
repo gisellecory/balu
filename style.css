@@ -18,14 +18,20 @@ Remove default browser settings
 Read more options
 ************************/
 
-p, h1, h1, .navitem {
-font-family: 'Source Sans Pro', sans-serif;
-padding: 1%;
+html {
+  font-size:14px;
+}
+
+p, h1, h2, .navitem {
+font-family: 'Noto Sans', sans-serif;
+/* font-family: 'Source Sans Pro', sans-serif; */
 }
 
 
 p {
   display: none;
+  color:rgb(61, 58, 49); /* charcoal */
+  padding: 1%;
 }
 
 
@@ -37,9 +43,8 @@ p:first-child {
 
 /* p:nth-child(2) */
 
-.read-more {
-  display: block;
-  text-align: right;
+p.read-more {
+  justify-content: flex-start;
 }
 
 .read-more a:link {
@@ -62,15 +67,26 @@ p:first-child {
 Headers
 ************************/
 
+header {
+  background-color:#706f6f;
+  /*background-image: url("imagelib/pattern.png");*/
+  min-height: 15vh;
+}
+
 h1 {
+text-align: center;
+/* padding:2% 0% 5% 0%; /* top right bottom left */
+color: rgb(43, 216, 197);
+font-size:1.5em;
+}
+
+h2 {
 color: rgb(43, 216, 197);
 font-size: 1.5em;
 white-space: nowrap;
 overflow: hidden;
 width: 100%;
 }
-
-h2 {}
 
 /************************
 Paragraphs and other text
@@ -96,66 +112,68 @@ p {
 Social media
 ************************/
 
-.socmedia-img {
+/* attributes common to all social media images go here */
+.social-img {
   padding: 2px;
-  max-width: 20vw;
+  min-width: 70px;
+  min-height: 70px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:70%;
+  display: inline-block;
 }
 
 .facebook {
-  min-width: 70px;
-  min-height: 70px;
-  background: url("file:///Users/gisellecory/Documents/GitHub/balu/imagelib/facebook.png") center/70% no-repeat;
-  display: inline-block;
+  background-image: url("imagelib/facebook.png");
 }
 
 .facebook:hover {
-  background: url("file:///Users/gisellecory/Documents/GitHub/balu/imagelib/facebook_black.png") center/70% no-repeat;
-  display: inline-block;
-  background-color: lightgrey;
+  background-image: url("imagelib/facebook_black.png");
 }
 
 .mailto {
-  min-width: 70px;
-  min-height: 70px;
-  background: url("file:///Users/gisellecory/Documents/GitHub/balu/imagelib/email.png") center/70% no-repeat;
-  display: inline-block;
+  background-image: url("imagelib/email.png");
 }
 
 .mailto:hover {
-  background: url("file:///Users/gisellecory/Documents/GitHub/balu/imagelib/email_black.png") center/70% no-repeat;
-  display: inline-block;
-  background-color: lightgrey;
+  background-image: url("imagelib/email_black.png");
 }
 
 .twitter {
-  min-width: 70px;
-  min-height: 70px;
-  background: url("file:///Users/gisellecory/Documents/GitHub/balu/imagelib/twitter.png") center/70% no-repeat;
-  display: inline-block;
+  background-image: url("imagelib/twitter.png");
 }
 
 .twitter:hover {
-  background: url("file:///Users/gisellecory/Documents/GitHub/balu/imagelib/twitter_black.png") center/70% no-repeat;
-  display: inline-block;
-  background-color: lightgrey;
+  background-image: url("imagelib/twitter_black.png");
 }
 
 .instagram {
-  min-width: 70px;
-  min-height: 70px;
-  background: url("file:///Users/gisellecory/Documents/GitHub/balu/imagelib/instagram.png") center/70% no-repeat;
-  display: inline-block;
+  background-image: url("imagelib/instagram.png");
 }
 
 .instagram:hover {
-  background: url("file:///Users/gisellecory/Documents/GitHub/balu/imagelib/instagram_black.png") center/70% no-repeat;
-  display: inline-block;
-  background-color: lightgrey;
+  background-image: url("imagelib/instagram_black.png");
 }
 
 #social {
   display: flex;
+  flex-direction: row;
+  /* align-items: center;
+  justify-content: center;
   margin: auto;
+  min-width: 70vw;*/
+}
+
+li.social-img {
+  margin: 0% 4% 0% 4%; /* top right bottom left */
+}
+
+ul.social-link {
+  min-width:70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .social-link a:link, .social-link a:visited {
@@ -171,14 +189,31 @@ p #mailto {
   text-align: center;
 }
 
+div.socmed-container-l1 {
+  display:flex;
+  flex-direction:column;
+  padding:10px;
+}
+
+div.socmed-container-l2 {
+  display:flex;
+  flex-direction:row;
+  padding:10px;
+}
+
+p.download {
+  display: inline-block;
+}
+
 /************************
 body and containers
 ************************/
 
 body {
   width: 100vw;
-  /*background-image: url("imagelib/pattern.png");*/
-  background-color: lightgrey;
+background-color: white;
+    /*background-color:#706f6f;
+    /* rgb(223, 223, 210); variation on the default lightgrey */
   overflow-x: hidden;
 }
 
@@ -192,24 +227,31 @@ div.container-overall {
   max-width: 95vw;
 }
 
-header {
-  /* padding:2% 0%; */
+div.container-master {
+  max-width: 95vw;
 }
 
 /************************
  /* Footer
  ************************/
 
-footer p {
-  text-align: center;
-  font-size: 1em;
-  color: white;
-  padding: 2% 5%;
-  /* Note - good if this is same as for .col */
+footer {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:#706f6f;
+  width:100%;
 }
 
 footer p.icon-attribution {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+  color: white;
+  padding: 5% 5% 5% 5%; /* top right bottom left */
   display: inline-block;
+  /* Note - good if this is same as for .col */
 }
 
 footer a:link, footer a:visited {
@@ -217,8 +259,8 @@ footer a:link, footer a:visited {
 }
 
 footer a:hover, footer a:active {
-  color: black;
   background-color: white;
+  color:#706f6f;
 }
 
 /************************
@@ -251,7 +293,17 @@ footer a:hover, footer a:active {
 .container-l1, .container-l2, .container-l3, .container-l4 {
   padding: 2px;
   margin: 4px 10px;
-  border-radius: 25px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-l4 {
+  padding-bottom: 20px
+}
+
+.container-l1 {
+  padding-top:20px; /* symmetry with l4 */
 }
 
 .col {
@@ -263,12 +315,18 @@ footer a:hover, footer a:active {
   background-color:white;
   display:flex;
   align-items: center;
-justify-content: center;
+  justify-content: center;
 }
 
 .feature-img {
   display: block;
   margin: auto;
+  padding:3%;
+  max-width: 100%;
+}
+
+.border-img {
+  border: 1px solid black;
 }
 
 /*
@@ -305,13 +363,13 @@ div.text {
 .fg-nav {
   min-height: 10vh;
   max-height: 50vh;
-  background-color: inherit;
   /* background-image: url("imagelib/pattern.png"); /* Make this a bit faded */
-  padding: 20px 5px 10px 5px; /* top right bottom left */
+  padding: 20px 5px 20px 5px; /* top right bottom left */
   max-width: 350px;
   margin: auto;
   display:flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   }
 
@@ -332,17 +390,41 @@ div.text {
     flex-direction: column;
 }
 
-.navitem a:hover {
+div.pagelinks {
+  position:absolute;
+  top:7%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) }
+
+div.icon {
+  position:absolute;
+  top:7%;
+  left:10%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) }
+
+div.pagelinks .navitem a:hover {
   color: white;
+  background-color: rgb(43, 216, 197);
 }
 
 #icon {
   max-height: 7vh;
 }
 
-div.flex-box {
+div.nav-section {
+  max-height: 7vh;
+}
+
+div.current a {
+    color: white;
+    background-color: rgb(43, 216, 197);
+  }
+
+div.flex-box { /* remove */
   display:flex;
-  flex-direction:row;
+  flex-direction: column;
 }
 
 /************************
@@ -363,6 +445,11 @@ div.flex-box {
   /* max-height: 150vh;*/
 }
 
+.pinned {
+  display:none;
+}
+
+
 
 /************************
 /* Bigger screens
@@ -371,32 +458,69 @@ div.flex-box {
 /* To be applied at all widths above 400px */
 
 @media(min-width:400px) {
-  .fg-nav {
-  /* max-width:90vw; */
-}
-.fg-nav, .nav-section {
-    flex-direction: column;
-}
+  ul.social-link {
+    flex-direction: row;
+  }
+
 .navitem, .navitem a {
-font-size: 1.2em;
-padding-top: 50px;
+  font-size: 1.2em;
+  padding-top: 50px;
 }
-
-
 .header-banner {
 display:flex;
 /* temp fix while wait on header image */
 width:100vw;
 height:6vh;
 background:rgb(43, 216, 197);
-background-image: url("imagelib/pattern.png");
+/*background-image: url("imagelib/pattern.png");*/
 background-repeat:repeat-x;
 background-position: left;
 background-size:30%;
 margin:10px 0px 10px 0px;
 }
 div.container-overall {
-  margin:10px 10px 10px 10px;
+  /* margin:10px 10px 10px 10px; */
+}
+.fg-nav, .nav-section {
+  flex-direction: row;
+}
+.fg-nav {
+  max-width: 90vw;
+}
+h1 {
+  font-size:2em;
+}
+/* ************ */
+  /* Pinned */
+/* ************ */
+
+.pinned {
+  display:flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  max-width:10vw;
+  min-width:120px;
+  padding:10px 20px;
+  border-radius: 5px;
+  background-color:rgb(43, 216, 197);
+}
+
+#mailto a {
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+}
+div.icon {
+  top:2%;
+}
+div.socmed-container-l1 {
+  flex-direction:row;
+}
+blockquote {
+  display:block;
 }
 
 }
@@ -410,7 +534,9 @@ p:nth-child(2) {
 div.container-overall {
   max-width: 85vw;
 }
-
+div.navitem {
+  font-size:14px;
+}
 }
 
 /* To be applied for larger widths only */
@@ -419,24 +545,36 @@ div.container-overall {
 p:nth-child(n) {
   display:flex;
 }
+p.download {
+  display:inline-block;
+}
 div.container-overall {
   max-width: 75vw;
 }
+div.flex-box { /* remove */
+  display:flex;
+  flex-direction:row;
+}
+
+}
+
+div.container-master {
+/*  padding: 0px 20px 0px 20px; /* top right bottom left */
+  /* this bit is unncessary at the mo */
+  /*align-items:flex-start;*/
+  margin:20px 40px;
+  flex-direction: row;
+  align-items: center;
 }
 
 @media(min-width:750px) {
-  div.container-master {
-    padding: 0px 20px 0px 20px; /* top right bottom left */
-    /* this bit is unncessary at the mo */
-    align-items:flex-start;
-    margin:20px 40px;
-  }
+
 
 .aside {
   display:flex;
 }
 .container-master {
-  flex-direction: row;
+  flex-direction: column;
 }
 
 }
@@ -472,12 +610,7 @@ div.image {
 }
 */
 
-#social {
-display:flex;
-align-items: center;
-vertical-align: middle;
-margin: 0%; /* top ones are smaller (caompared to text divs), to minimise gaps in mobile version */
-padding: 0%;
+div#social {
 }
 
 .container-l4 {
@@ -511,6 +644,16 @@ section.container-grid {
   flex-direction:column;
 }
 
+/* ************ */
+/* Quotes */
+/* ************ */
+
+blockquote {
+  display:none;
+  padding: 10px 50px 10px 50px; /* top right bottom left */
+  font-style: oblique;
+  font-weight: lighter;
+  }
 
 /* ************ */
 /* Grid (directory) */
@@ -533,29 +676,37 @@ section.container-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
-    grid-auto-rows: minmax(120px, auto);
+    grid-auto-rows: minmax(200px, auto);
     background-color: white;
     font-style:oblique;
-    padding: 40px 20px 40px 20px;
-    max-width: 90vw;
+    padding: 50px 0px 40px 0px;
+    max-width: 100vw;
   }
 
-  .box {
+  div.box {
     color:rgba(0, 0, 0, 0);
     padding: 0px 10px 0px 10px; /* top right bottom left */
     background-size: 100% auto;
   }
 
-  .box a {
+  div.box a {
     display: block;
-    color:rgba(0, 0, 0, 0);
     text-decoration: none;
     line-height: 30px;
-    text-align:center;
+    /*text-align:center;*/
     font-size:25px;
 }
 
-  .box:hover {
+div.box a p {
+  color:rgba(0, 0, 0, 0);
+  text-align: left;
+}
+
+div.box:hover a p {
+  color:white;
+}
+
+  div.box:hover {
     line-height: 30px;
     text-align:center;
     font-size:25px;
@@ -570,85 +721,104 @@ section.container-grid {
   color:white;
 }
 
-  .one {
-    grid-column: 2;
-    grid-row: 1;
-    background-image:url("imagelib/brand_brothers.png");
-    background-color:pink;
+.one {
+  grid-column: 2;
+  grid-row: 1;
+  background-image:url("imagelib/brand_brothers.png");
+  background-color:pink;
+}
+
+.one:hover {
+  background: linear-gradient(rgba(232, 163, 86,0.45),rgba(43, 216, 197,0.45)), url("imagelib/brand_brothers.png");
+  background-size: 100% auto;
   }
 
-  .one:hover {
-    background: linear-gradient(rgba(255, 0, 0, 0.45), rgba(232, 163, 86, 0.45)), url("imagelib/brand_brothers.png");
-    background-size: 100% auto;
-    }
+.two {
+  grid-column: 1;
+  grid-row: 1/3;
+  background-image:url("imagelib/brand_howies.png");
+  background-color:red;
+}
 
-  .two {
-    grid-column: 1;
-    grid-row: 1/3;
-    background-image:url("imagelib/brand_howies.png");
-    background-color:red;
-  }
+.two:hover {
+  background: linear-gradient(rgba(116, 144, 22, 0.45),rgba(43, 216, 197,0.45)), url("imagelib/brand_howies.png");
+  background-size: 100% auto;
+}
 
-  .two:hover {
-    background: linear-gradient(rgba(255, 0, 0, 0.45), rgba(116, 144, 22, 0.45)), url("imagelib/brand_howies.png");
-    background-size: 100% auto;
-  }
+.three {
+  grid-column: 3;
+  grid-row: 3;
+  background-image:url("imagelib/brand_mayamiko.png");
+  background-color:blue;
+}
 
-  .three {
-    grid-column: 3;
-    grid-row: 3;
-    background-image:url("imagelib/brand_mayamiko.png");
-    background-color:blue;
-  }
-
-  .three:hover {
-    background: linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 194, 141, 0.45)), url("imagelib/brand_mayamiko.png");
+.three:hover {
+  background: linear-gradient(rgba(255, 194, 141, 0.45),rgba(43, 216, 197,0.45)), url("imagelib/brand_mayamiko.png");
 background-size: 100% auto;
-  }
+}
 
-  .four {
-    grid-column: 2;
-    grid-row: 2/4;
-    background-image:url("imagelib/brand_pozu.png");
-    background-color:yellow;
-  }
+.four {
+  grid-column: 2;
+  grid-row: 2/4;
+  background-image:url("imagelib/brand_pozu.png");
+  background-color:yellow;
+}
 
-  .four:hover {
-    background: linear-gradient(rgba(99, 106, 124, 0.45), rgba(99, 106, 124, 0.45)),
-    url("imagelib/brand_pozu.png");
-    background-size: 100% auto;
-  }
+.four:hover {
+  background: linear-gradient(rgba(99, 106, 124, 0.45),rgba(43, 216, 197,0.45)),    url("imagelib/brand_pozu.png");
+  background-size: 100% auto;
+}
 
-  .five {
-    grid-column: 1;
-    grid-row: 3;
-    background-image:url("imagelib/brand_birdsong.png");
-    background-color:green; /* incase image doesn't show */
-  }
+.five {
+  grid-column: 1;
+  grid-row: 3;
+  background-image:url("imagelib/brand_birdsong.png");
+  background-color:green; /* incase image doesn't show */
+}
 
-  .five:hover {
-    background: linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 65, 145, 0.45)),
-    url("imagelib/brand_birdsong.png");
-    background-size: 100% auto;
-  }
+.five:hover {
+  background: linear-gradient(rgba(255, 65, 145, 0.45),rgba(43, 216, 197,0.45)),
+  url("imagelib/brand_birdsong.png");
+  background-size: 100% auto;
+}
 
-  .six {
-    grid-column: 3;
-    grid-row: 1/3;
-    background-image:url("imagelib/brand_peopletree.png");
-    background-color:grey;
-  }
+.six {
+  grid-column: 3;
+  grid-row: 1/3;
+  background-image:url("imagelib/brand_peopletree.png");
+  background-color:grey;
+}
 
-  .six:hover {
-    background: linear-gradient(rgba(249, 105, 0, 0.45), rgba(229, 105, 0, 0.45)), url("imagelib/brand_peopletree.png");
-    background-size: 100% auto;
-  }
+.six:hover {
+  background: linear-gradient(rgba(229, 105, 0, 0.45),rgba(43, 216, 197,0.45)), url("imagelib/brand_peopletree.png");
+  background-size: 100% auto;
+}
 
-  div.box p:first-child {
-    font-size:1em;
-    text-align: center;
-  }
+div.box p:first-child {
+  font-size:1em;
+  /*text-align: center;*/
+}
 
 div.box p:nth-child(2) {
   font-size:0.6em;
+}
+
+/************************
+/* Aside
+************************/
+
+.aside {
+  display: flex; /* none */
+  min-width: 10vw;
+  max-width: 25vw;
+  color: white;
+  margin:auto;
+  margin-top:4px;
+  border: 5px solid #706f6f;
+  /* margin: 4px 15px 4px 10px; /* top right bottom left */
+
+}
+
+.twitter-timeline {
+  /* max-height: 150vh;*/
 }

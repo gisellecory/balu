@@ -13,141 +13,132 @@
   <!-- responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" type="text/css">
-
-  <!-- Font
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-
 
 </head>
 
 <body>
+  <main>
+    <header>
 
-    <main>
+      <!-- Navigation -->
 
-      <header>
+      <nav class="fg-nav">
+        <!-- Navigation split into two divs for purposes of manipulating icon and pagelinks separately for mobile viewing -->
+        <div class="nav-section icon">
+          <div class="navitem"><a href="index.html"><img id="icon" src="imagelib/icon_small.png" alt="Balu Icon"></a></div>
+        </div>
+        <div class="nav-section pagelinks">
+          <div class="navitem"><a href="download.html">Download</a></div>
+          <div class="navitem"><a href="directory.html">Directory</a></div>
+          <div class="navitem"><a href="about.html">About</a></div>
+        </div>
+      </nav>
 
-        <!-- Navigation -->
+    </header>
 
-        <nav class="fg-nav">
-          <div class="nav-section icon">
-            <div class="navitem"><a href="index.html"><img id="icon" src="imagelib/icon_small.png" alt="Balu Icon"></a></div>
+    <!-- Main content -->
+
+    <div class="container-master"> <!-- Master container not functional on this page, however provides more flexibilit with overall design on other pages and in other isntances -->
+
+      <div class="container-overall"> <!-- Flex container for four main sections of the body of th site: container-l1, container-l2, container-l3, container-l4 -->
+
+        <div class="container-l1">  <!-- Page heading section -->
+          <div class="col l1 text">
+            <h1>Buy better. Live lighter. Use Balu.</h1>
           </div>
-          <div class="nav-section pagelinks">
-            <div class="navitem"><a href="download.html">Download</a></div>
-            <div class="navitem"><a href="directory.html">Directory</a></div>
-            <div class="navitem"><a href="about.html">About</a></div>
-          </div>
-        </nav>
+        </div>
 
-      </header>
+        <div class="container-l1"> <!-- First container for main content -->
 
-<div class="container-master">
-
-        <div class="container-overall">
-
-<div class="container-l1">
-<div class="col l1 text">
-<h1>Buy better. Live lighter. Use Balu.</h1>
-</div>
-</div>
-
-          <div class="container-l1">
-            <div class="col l1 image">
-              <img class="feature-img" src="imagelib/group.png" alt="">
-            </div>
-
-            <div class="col l1 text">
-
-              <h2>What is Balu?</h2>
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
-                <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
-                <p>Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
-                <p class="read-more"><a href="about.html">&gt;&gt; Learn more</a></p>
-</div>
-              </div>
-            </div>
-
-          <div class="container-l2">
-
-            <div class="col l2 image">
-              <img class="feature-img" src="imagelib/birdsong1.jpg" alt="">
-            </div>
-
-            <div class="col l2 text" id="left-pic-text">
-              <h2>Our brands</h2>
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
-                <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
-                <p>Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
-                <p class="read-more"><a href="directory.html">&gt;&gt; See our directory</a></p>
-              </div>
-            </div>
-
+          <div class="col l1 image"> <!-- Image section -->
+            <img class="feature-img" src="imagelib/group.png" alt="">
           </div>
 
+          <div class="col l1 text">  <!-- Text section -->
 
-          <div class="container-l3">
-
-            <div class="col l3 image">
-              <img class="feature-img" src="imagelib/birdsong1.jpg" alt="">
+            <h2>What is Balu?</h2>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
+              <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
+              <p>Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
+              <p class="read-more"><a href="about.html">&gt;&gt; Learn more</a></p>
             </div>
+          </div>
+        </div>
 
-            <div class="col l3 text">
-              <h2>Get the app</h2>
+        <div class="container-l2"> <!-- Second container for main content -->
 
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
-                <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
-                <p>
-                  Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
-                <p class="read-more"><a href="download.html">&gt;&gt; Download</a></p>
-              </div>
-            </div>
-
+          <div class="col l2 image">
+            <img class="feature-img" src="imagelib/birdsong1.jpg" alt="">
           </div>
 
-          <div class="container-l4">
+          <div class="col l2 text">
+            <h2>Our brands</h2>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
+              <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
+              <p>Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
+              <p class="read-more"><a href="directory.html">&gt;&gt; See our directory</a></p>
+            </div>
+          </div>
+        </div>
 
-            <div class="col l4 image" id="social">
-              <ul class="social-link">
-                <div class="socmed-container-l1">
+        <div class="container-l3">  <!-- Third container for main content -->
+
+          <div class="col l3 image">
+            <img class="feature-img" src="imagelib/birdsong1.jpg" alt="">
+          </div>
+
+          <div class="col l3 text">
+            <h2>Get the app</h2>
+
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
+              <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
+              <p>
+                Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
+              <p class="read-more"><a href="download.html">&gt;&gt; Download</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container-l4">  <!-- Fourth container: social media icons -->
+
+          <div class="col l4 image" id="social">
+            <ul class="social-link">
+              <div class="socmed-container-l1">
                 <div class="socmed-container-l2">
-                <li class="social-img facebook"> <a href="https://www.facebook.com/baluHQ/" target="_blank"></a></li>
-                <li class="social-img mailto"><a href="mailto:info@getbalu.org" target="_blank"></a></li>
-</div>
-<div class="socmed-container-l2">
-                <li class="social-img twitter"><a href="https://twitter.com/BaluHQ" target="_blank"></a></li>
-                <li class="social-img instagram"><a href="https://www.instagram.com/balu_hq/" target="_blank"></a></li>
+                  <li class="social-img facebook"> <a href="https://www.facebook.com/baluHQ/" target="_blank"></a></li>
+                  <li class="social-img mailto"><a href="mailto:info@getbalu.org" target="_blank"></a></li>
+                </div>
+                <div class="socmed-container-l2">
+                  <li class="social-img twitter"><a href="https://twitter.com/BaluHQ" target="_blank"></a></li>
+                  <li class="social-img instagram"><a href="https://www.instagram.com/balu_hq/" target="_blank"></a></li>
                 </div>
               </div>
-              </ul>
-            </div>
+            </ul>
           </div>
-</div>
-
+        </div>
       </div>
 
-      <footer>
+    </div>
 
-        <p class="icon-attribution">
-          This site is published under a Creative Commons license. Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>, and licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-            title="Creative Commons BY 3.0" target="_blank">Creative Commons</a></p>
+    <footer>  <!-- Footer: copyright notice and icon attribution -->
 
+      <p class="icon-attribution">
+        This site is published under a Creative Commons license. Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>, and licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">Creative Commons</a></p>
 
-      </footer>
+    </footer>
 
-      <div class="pinned">
-    		<p id="mailto"><a href="mailto:gisellecory@gmail.com">Email us</a></p>
-    	</div>
+    <div class="pinned"> <!-- An 'Email us' button, pinned to the bottom right of viewport -->
+      <p id="mailto"><a href="mailto:gisellecory@gmail.com">Email us</a></p>
+    </div>
 
-    </main>
-
-
+  </main>
 </body>
-
 </html>

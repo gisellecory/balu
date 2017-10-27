@@ -1,5 +1,8 @@
-/* This CSS is written for mobile-first, i.e. max-wdtih:400px */
+/* Style sheet for Balu project, Cardiff, October 2017 */
 
+/* Notes:
+This CSS is written for mobile-first, i.e. max-wdtih:400px
+*/
 
 /************************
 Remove default browser settings
@@ -11,48 +14,71 @@ Remove default browser settings
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
 }
 
 /************************
-Read more options
+Default text options (across the site)
 ************************/
 
 html {
-  font-size:14px;
+  font-size: 14px;
+  font-family: 'Noto Sans', sans-serif;
 }
-
-p, h1, h2, .navitem {
-font-family: 'Noto Sans', sans-serif;
-/* font-family: 'Source Sans Pro', sans-serif; */
-}
-
 
 p {
-  display: none;
-  color:rgb(61, 58, 49); /* charcoal */
+  display: none; /* No p elements displayed by default - display property used to show elements depending on screen width */
+  color: rgb(61, 58, 49); /* charcoal */
   padding: 1%;
+  text-align: justify;
+  font-size: 1.2em;
 }
-
-
-/* eventually this should be mobile only */
 
 p:first-child {
   display: flex;
 }
 
-/* p:nth-child(2) */
+/************************
+Headings
+************************/
 
-p.read-more {
-  justify-content: flex-start;
+h1, h2 {
+  color: rgb(43, 216, 197); /* Balu blue */
 }
 
-.read-more a:link {
-  text-decoration: none;
-  color: rgb(43, 216, 197);
+h1 {
+  text-align: center;
+  font-size: 2em;
 }
 
-.read-more a:visited {
+h2 {
+  font-size: 1.5em;
+}
+
+/************************
+Lists
+************************/
+
+ul.dirlist-mobile {
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+}
+
+ul.story {
+  list-style: square;
+  list-style-position: inside;
+  text-align: left;
+  font-size: 1.2em;
+  color: rgb(61, 58, 49);
+  /* charcoal */
+  margin-left: 1vw;
+}
+
+/************************
+Read-more
+************************/
+
+.read-more a:link, .read-more a:visited {
   text-decoration: none;
   color: rgb(43, 216, 197);
 }
@@ -64,290 +90,118 @@ p.read-more {
 }
 
 /************************
-Headers
-************************/
-
-header {
-  background-color:#706f6f;
-  /*background-image: url("imagelib/pattern.png");*/
-  min-height: 15vh;
-}
-
-h1 {
-text-align: center;
-/* padding:2% 0% 5% 0%; /* top right bottom left */
-color: rgb(43, 216, 197);
-font-size:1.5em;
-}
-
-h2 {
-color: rgb(43, 216, 197);
-font-size: 1.5em;
-white-space: nowrap;
-overflow: hidden;
-width: 100%;
-}
-
-/************************
-Paragraphs and other text
-************************/
-
-p {
-  text-align: justify;
-  font-size: 1.2em;
-}
-
-.l4 p {
-  text-align: center;
-  margin: auto;
-}
-
-.navitem {
-  font-size: 1.5em;
-  font-weight: bold;
-  /* why does this work? */
-}
-
-/************************
 Social media
 ************************/
 
 /* attributes common to all social media images go here */
+
+/* list items containing social media images */
 .social-img {
   padding: 2px;
   min-width: 70px;
   min-height: 70px;
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:70%;
-  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
 }
 
-.facebook {
-  background-image: url("imagelib/facebook.png");
-}
-
-.facebook:hover {
-  background-image: url("imagelib/facebook_black.png");
-}
-
-.mailto {
-  background-image: url("imagelib/email.png");
-}
-
-.mailto:hover {
-  background-image: url("imagelib/email_black.png");
-}
-
-.twitter {
-  background-image: url("imagelib/twitter.png");
-}
-
-.twitter:hover {
-  background-image: url("imagelib/twitter_black.png");
-}
-
-.instagram {
-  background-image: url("imagelib/instagram.png");
-}
-
-.instagram:hover {
-  background-image: url("imagelib/instagram_black.png");
-}
-
-#social {
-  display: flex;
-  flex-direction: row;
-  /* align-items: center;
-  justify-content: center;
-  margin: auto;
-  min-width: 70vw;*/
-}
+/* social media icons */
+.facebook { background-image: url("imagelib/facebook.png"); }
+.facebook:hover { background-image: url("imagelib/facebook_black.png"); }
+.mailto { background-image: url("imagelib/email.png"); }
+.mailto:hover { background-image: url("imagelib/email_black.png"); }
+.twitter { background-image: url("imagelib/twitter.png"); }
+.twitter:hover { background-image: url("imagelib/twitter_black.png"); }
+.instagram { background-image: url("imagelib/instagram.png"); }
+.instagram:hover { background-image: url("imagelib/instagram_black.png"); }
 
 li.social-img {
   margin: 0% 4% 0% 4%; /* top right bottom left */
 }
 
 ul.social-link {
-  min-width:70vw;
+  min-width: 70vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  list-style: none;
 }
 
 .social-link a:link, .social-link a:visited {
   text-decoration: none;
 }
 
-#mailto {
-  display: block;
-  font-size: 1.5em;
+/* outer container for social media icons */
+#social {
+  display: flex;
+  flex-direction: row;
 }
 
-p #mailto {
-  text-align: center;
+/* inner containers for social media icons - to create a row or grid depending on screen width */
+div.socmed-container-l1, div.socmed-container-l2 {
+  display: flex;
+  padding: 10px;
 }
 
 div.socmed-container-l1 {
-  display:flex;
-  flex-direction:column;
-  padding:10px;
+  flex-direction: column;
 }
 
 div.socmed-container-l2 {
-  display:flex;
-  flex-direction:row;
-  padding:10px;
-}
-
-p.download {
-  display: inline-block;
+  flex-direction: row;
 }
 
 /************************
-body and containers
+Body and containers
 ************************/
 
 body {
   width: 100vw;
-background-color: white;
-    /*background-color:#706f6f;
-    /* rgb(223, 223, 210); variation on the default lightgrey */
-  overflow-x: hidden;
+  background-color: white;
 }
 
 .container-overall, .container-l1, .container-l2, .container-l3, .container-l4, .container-master {
   display: flex;
   flex-direction: column;
-}
-
-
-div.container-overall {
-  max-width: 95vw;
-}
-
-div.container-master {
-  max-width: 95vw;
-}
-
-/************************
- /* Footer
- ************************/
-
-footer {
-  display:flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:#706f6f;
-  width:100%;
 }
 
-footer p.icon-attribution {
-  text-align: center;
-  font-style: italic;
-  font-size: 0.9em;
-  color: white;
-  padding: 5% 5% 5% 5%; /* top right bottom left */
-  display: inline-block;
-  /* Note - good if this is same as for .col */
+div.container-overall, div.container-master {
+  max-width: 95vw;
 }
-
-footer a:link, footer a:visited {
-  color: white;
-}
-
-footer a:hover, footer a:active {
-  background-color: white;
-  color:#706f6f;
-}
-
-/************************
- Header banner
- ************************/
-
- #header-img {
-   width: 100vw;
-   max-height: 10vw;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
- }
-
- .header-banner {
-   background-color: white;
-   /* this is a quick fix to deal with the gap underneath the banner */
-   padding: 0%;
-   margin: 0%;
-   margin-top:10px;
-   margin-bottom:10px;
-   display: none;
-   /* turn this on for larger screens */
- }
-
-/************************
-/* Main grid
-************************/
 
 .container-l1, .container-l2, .container-l3, .container-l4 {
   padding: 2px;
   margin: 4px 10px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.container-l4 {
-  padding-bottom: 20px
-}
-
-.container-l1 {
-  padding-top:20px; /* symmetry with l4 */
+.container-l4, .container-l1 { /* maintain symmetry at top and bottom of page */
+  padding-bottom: 1vh;
 }
 
 .col {
   max-width: 100vw;
-  border-radius: 25px; /* so corners don't poke out at small sizes */
 }
 
 .container-master {
-  background-color:white;
-  display:flex;
-  align-items: center;
-  justify-content: center;
+  background-color: white;
 }
+
+/************************
+Images
+************************/
 
 .feature-img {
   display: block;
   margin: auto;
-  padding:3%;
+  padding: 3%;
   max-width: 100%;
 }
 
-.border-img {
-  border: 1px solid black;
-}
-
-/*
 div.image {
-  vertical-align: middle;
-  margin: 0% 2% 3% 2%; /* top ones are smaller (caompared to text divs), to minimise gaps in mobile version */ /*
-  padding: 5px 5px;
-}
-*/
-
-div.image
-{
-  display:block;
-/*
-  width:50%;
-  position: relative;
-  overflow: hidden;
-  margin:4%;
-  order: 2;
-  padding: 0px 5px 2px 5px; /* top right bottom left */
-/* padding: 40% 0 10% 0; */
+  display: block;
 }
 
 div.text {
@@ -357,52 +211,63 @@ div.text {
 }
 
 /************************
+ /* Footer
+ ************************/
+
+footer {
+  background-color: #706f6f;
+  width: 100%;
+}
+
+footer p.icon-attribution {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+  color: white;
+  padding: 5% 5% 5% 5%; /* top right bottom left */
+  display: inline-block;
+}
+
+footer a:link, footer a:visited {
+  color: white;
+}
+
+footer a:hover, footer a:active {
+  background-color: white;
+  color: #706f6f;
+}
+
+/************************
 /* Navigation
 ************************/
 
 .fg-nav {
-  min-height: 10vh;
-  max-height: 50vh;
-  /* background-image: url("imagelib/pattern.png"); /* Make this a bit faded */
-  padding: 20px 5px 20px 5px; /* top right bottom left */
-  max-width: 350px;
-  margin: auto;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  }
+  flex-direction: row;
+  background-color: #706f6f;
+  min-height: 12vh;
+}
 
 .navitem, .navitem a {
   color: rgb(43, 216, 197);
   text-decoration: none;
-  font-size: 1.1em;
   text-align: center;
-  padding: 2px 1vw;
-  margin: 5px; /* top and bottom, left and right */
   flex-direction: row;
+  font-size: 1em;
+  padding: 3px 3px;
+  /* so will be included within hover effects */
+  margin: 0.5vh 1.5vw;
+  /* top and bottom, left and right */
 }
 
 .nav-section {
-    display: flex;
-    max-width:90vw;
-    justify-content:center;
-    flex-direction: column;
+  display: flex;
+  max-width: 90vw;
+  justify-content: center;
+  flex-direction: column;
 }
-
-div.pagelinks {
-  position:absolute;
-  top:7%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%) }
-
-div.icon {
-  position:absolute;
-  top:7%;
-  left:10%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%) }
 
 div.pagelinks .navitem a:hover {
   color: white;
@@ -413,18 +278,9 @@ div.pagelinks .navitem a:hover {
   max-height: 7vh;
 }
 
-div.nav-section {
-  max-height: 7vh;
-}
-
 div.current a {
-    color: white;
-    background-color: rgb(43, 216, 197);
-  }
-
-div.flex-box { /* remove */
-  display:flex;
-  flex-direction: column;
+  color: white;
+  background-color: rgb(43, 216, 197);
 }
 
 /************************
@@ -436,389 +292,286 @@ div.flex-box { /* remove */
   min-width: 10vw;
   max-width: 25vw;
   color: white;
-  margin:auto;
-  margin-top:4px;
-  /* margin: 4px 15px 4px 10px; /* top right bottom left */
+  margin: auto;
+  margin-top: 4px;
+  border: 5px solid #706f6f;
 }
-
-.twitter-timeline {
-  /* max-height: 150vh;*/
-}
-
-.pinned {
-  display:none;
-}
-
-
 
 /************************
-/* Bigger screens
+/* Pinned element
 ************************/
 
-/* To be applied at all widths above 400px */
-
-@media(min-width:400px) {
-  ul.social-link {
-    flex-direction: row;
-  }
-
-.navitem, .navitem a {
-  font-size: 1.2em;
-  padding-top: 50px;
-}
-.header-banner {
-display:flex;
-/* temp fix while wait on header image */
-width:100vw;
-height:6vh;
-background:rgb(43, 216, 197);
-/*background-image: url("imagelib/pattern.png");*/
-background-repeat:repeat-x;
-background-position: left;
-background-size:30%;
-margin:10px 0px 10px 0px;
-}
-div.container-overall {
-  /* margin:10px 10px 10px 10px; */
-}
-.fg-nav, .nav-section {
-  flex-direction: row;
-}
-.fg-nav {
-  max-width: 90vw;
-}
-h1 {
-  font-size:2em;
-}
-/* ************ */
-  /* Pinned */
-/* ************ */
-
 .pinned {
-  display:flex;
+  display: none;
   position: fixed;
   bottom: 0;
   right: 0;
-  max-width:10vw;
-  min-width:120px;
-  padding:10px 20px;
+  max-width: 10vw;
+  min-width: 120px;
+  padding: 10px 20px;
   border-radius: 5px;
-  background-color:rgb(43, 216, 197);
+  background-color: rgb(43, 216, 197);
+}
+
+#mailto {
+  display: block;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 #mailto a {
-  display: block;
   color: black;
-  text-align: center;
-  font-size: 1em;
   text-decoration: none;
 }
-div.icon {
-  top:2%;
-}
-div.socmed-container-l1 {
-  flex-direction:row;
-}
-blockquote {
-  display:block;
-}
 
-}
+/************************
+/* Grid (directory) - on mobile
+************************/
 
-/* To be applied for medium widths only */
-
-@media(min-width:400px) and (max-width:600px) {
-p:nth-child(2) {
-  display:flex;
-}
-div.container-overall {
-  max-width: 85vw;
-}
-div.navitem {
-  font-size:14px;
-}
-}
-
-/* To be applied for larger widths only */
-
-@media(min-width:600px) {
-p:nth-child(n) {
-  display:flex;
-}
-p.download {
-  display:inline-block;
-}
-div.container-overall {
-  max-width: 75vw;
-}
-div.flex-box { /* remove */
-  display:flex;
-  flex-direction:row;
-}
-
-}
-
-div.container-master {
-/*  padding: 0px 20px 0px 20px; /* top right bottom left */
-  /* this bit is unncessary at the mo */
-  /*align-items:flex-start;*/
-  margin:20px 40px;
-  flex-direction: row;
+section.container-grid {
+  display: flex;
   align-items: center;
-}
-
-@media(min-width:750px) {
-
-
-.aside {
-  display:flex;
-}
-.container-master {
+  justify-content: center;
   flex-direction: column;
 }
 
+div.wrapper {
+  display: block;
+  padding: 50px 0px 40px 0px;
+  max-width: 100vw;
 }
 
-@media(min-width:900px) {
-.container-l1, .container-l2, .container-l3 {
-  flex-direction: column; /* Move images to the side if have row entered */
-}
-div.text {
-  order: 0;
-  max-width:65vw;
-/*  min-width:55vw; */
-  padding:0% 2%; /* top right bottom left */
+div.box {
+  padding: 0px 10px 0px 30px;
+  /* top right bottom left */
+  background-size: auto 100%;
+  margin: 10px 10px;
 }
 
-#left-pic-text {
-  margin-left:0;
+div.box a {
+  text-decoration: none;
+  line-height: 50px;
+  font-size: 25px;
 }
 
-div.image {
-  order: 0;
-}
-   /*
-  display:flex;
-  align-items: center;
-  vertical-align: middle;
-  margin: 0%; /* top ones are smaller (caompared to text divs), to minimise gaps in mobile version *//*
-  padding: 0%;
-}
-.feature-img {
-  max-width:80%;
-  max-height:80%
-}
-*/
-
-div#social {
+/* Font size for text within grid */
+div.box p:first-child {
+  font-size: 1em;
 }
 
-.container-l4 {
-  flex-direction: row;
+div.box p:nth-child(2) {
+  font-size: 0.6em;
 }
 
-#mailto-div {
-  display:flex;
-  align-items: center;
-  padding:0;
-  min-width:40%;
-}
-}
+/* Grid colours */
+.one { background-color: #ffcfd8; }
+.two { background-color: #fcf0bf; }
+.three { background-color: #d9b9eb; }
+.four { background-color: #ffcfd8; }
+.five { background-color: #fcf0bf; }
+.six { background-color: #d9b9eb; }
 
+/************************
+Miscellanous bits
+************************/
 
-/* ************ */
-/* Directory page */
-/* ************ */
-
-div.narrow {
-  background-color: white;
-  max-width: 75vw;
-  padding:1%;
-  margin:2%;
+p.download {
+  display: inline-block;
 }
 
-section.container-grid {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction:column;
-}
+/************************
+************************
+/* MEDIA QUERIES - for screen widths above 400px
+************************
+************************/
 
-/* ************ */
-/* Quotes */
-/* ************ */
+/* (Query 1) To be applied at all widths above 400px */
 
-blockquote {
-  display:none;
-  padding: 10px 50px 10px 50px; /* top right bottom left */
-  font-style: oblique;
-  font-weight: lighter;
+@media(min-width:400px) {
+
+  ul.social-link, .fg-nav, .nav-section, div.socmed-container-l1 {
+    flex-direction: row;
   }
 
-/* ************ */
-/* Grid (directory) */
-/* ************ */
+  div.navitem, div.navitem a {
+    font-size: 1.2em;
+    padding: 1vh 1vw; /* Note: padding will be included within hover effects */
+    margin: 2vh 2vw;
+  }
 
-   /* Structure */
+  h1 {
+    font-size: 2em;
+  }
+  .pinned {
+    display: flex;
+}
 
-   .three-column {
-     padding: 1em;
-     column-count: 3;
-     -moz-column-count: 3;
-     -webkit-column-count: 3;
-     column-gap: 40px;
-     -moz-column-gap: 40px;
-     -webkit-column-gap: 40px;
-     -webkit-column-width: 250px;
-   }
+} /* End of query 1 */
 
-  .wrapper {
+/* (Query 2) To be applied for medium widths only (400-600px) */
+
+@media(min-width:400px) and (max-width:600px) {
+
+  /* Display second paragraph in each div */
+  p:nth-child(2) {
+    display: flex;
+  }
+
+  div.navitem {
+    font-size: 1em;
+  }
+
+} /* End of query 2 */
+
+/* (Query 3) To be applied for larger widths only (above 600px) */
+
+@media(min-width:600px) {
+
+  /* Display all paragraphs in each div */
+  p:nth-child(n) {
+    display: flex;
+  }
+
+  div.container-master {
+    margin: 20px 40px;
+  }
+
+} /* End of query 3 */
+
+/* (Query 4) To be applied for larger widths only (above 750px) */
+
+@media(min-width:750px) {
+
+  /* Display Twitter feed */
+  .aside {
+    display: flex;
+  }
+
+  /* Grid (directory) - desktop */
+
+  div.wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
     grid-auto-rows: minmax(200px, auto);
-    background-color: white;
-    font-style:oblique;
     padding: 50px 0px 40px 0px;
     max-width: 100vw;
   }
 
   div.box {
-    color:rgba(0, 0, 0, 0);
-    padding: 0px 10px 0px 10px; /* top right bottom left */
-    background-size: 100% auto;
+    background-size: auto 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
   }
 
   div.box a {
     display: block;
     text-decoration: none;
     line-height: 30px;
-    /*text-align:center;*/
-    font-size:25px;
-}
-
-div.box a p {
-  color:rgba(0, 0, 0, 0);
-  text-align: left;
-}
-
-div.box:hover a p {
-  color:white;
-}
-
-  div.box:hover {
-    line-height: 30px;
-    text-align:center;
-    font-size:25px;
-    color:white;
-    padding:10px;
-    margin: 0px;
-  /*  background-size: 100% auto; It doesn't listen to this command so put in individually */
-    background-color: black;
-}
-
-.box:hover a {
-  color:white;
-}
-
-.one {
-  grid-column: 2;
-  grid-row: 1;
-  background-image:url("imagelib/brand_brothers.png");
-  background-color:pink;
-}
-
-.one:hover {
-  background: linear-gradient(rgba(232, 163, 86,0.45),rgba(43, 216, 197,0.45)), url("imagelib/brand_brothers.png");
-  background-size: 100% auto;
+    font-size: 25px;
   }
 
-.two {
-  grid-column: 1;
-  grid-row: 1/3;
-  background-image:url("imagelib/brand_howies.png");
-  background-color:red;
-}
+  div.box a p {
+    color: rgba(0, 0, 0, 0); /* makes text invisible */
+    text-align: left;
+  }
 
-.two:hover {
-  background: linear-gradient(rgba(116, 144, 22, 0.45),rgba(43, 216, 197,0.45)), url("imagelib/brand_howies.png");
-  background-size: 100% auto;
-}
+  div.box:hover a p {
+    color: white;
+  }
 
-.three {
-  grid-column: 3;
-  grid-row: 3;
-  background-image:url("imagelib/brand_mayamiko.png");
-  background-color:blue;
-}
+  div.box:hover {
+    background-size: auto 100%;
+  }
 
-.three:hover {
-  background: linear-gradient(rgba(255, 194, 141, 0.45),rgba(43, 216, 197,0.45)), url("imagelib/brand_mayamiko.png");
-background-size: 100% auto;
-}
+/* Grid images and hover effects */
 
-.four {
-  grid-column: 2;
-  grid-row: 2/4;
-  background-image:url("imagelib/brand_pozu.png");
-  background-color:yellow;
-}
+  .one {
+    grid-column: 2;
+    grid-row: 1;
+    background-image: url("imagelib/brand_brothers.png");
+    background-color: pink; /* colours here are in case images do not appear */
+  }
 
-.four:hover {
-  background: linear-gradient(rgba(99, 106, 124, 0.45),rgba(43, 216, 197,0.45)),    url("imagelib/brand_pozu.png");
-  background-size: 100% auto;
-}
+  .one:hover {
+    background: linear-gradient(rgba(232, 163, 86, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_brothers.png");
+  }
 
-.five {
-  grid-column: 1;
-  grid-row: 3;
-  background-image:url("imagelib/brand_birdsong.png");
-  background-color:green; /* incase image doesn't show */
-}
+  .two {
+    grid-column: 1;
+    grid-row: 1/3;
+    background-image: url("imagelib/brand_howies.png");
+    background-color: red;
+  }
 
-.five:hover {
-  background: linear-gradient(rgba(255, 65, 145, 0.45),rgba(43, 216, 197,0.45)),
-  url("imagelib/brand_birdsong.png");
-  background-size: 100% auto;
-}
+  .two:hover {
+    background: linear-gradient(rgba(116, 144, 22, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_howies.png");
+    background-size: 100% auto;
+  }
 
-.six {
-  grid-column: 3;
-  grid-row: 1/3;
-  background-image:url("imagelib/brand_peopletree.png");
-  background-color:grey;
-}
+  .three {
+    grid-column: 3;
+    grid-row: 3;
+    background-image: url("imagelib/brand_mayamiko.png");
+    background-color: blue;
+  }
 
-.six:hover {
-  background: linear-gradient(rgba(229, 105, 0, 0.45),rgba(43, 216, 197,0.45)), url("imagelib/brand_peopletree.png");
-  background-size: 100% auto;
-}
+  .three:hover {
+    background: linear-gradient(rgba(255, 194, 141, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_mayamiko.png");
+    background-size: 100% auto;
+  }
 
-div.box p:first-child {
-  font-size:1em;
-  /*text-align: center;*/
-}
+  .four {
+    grid-column: 2;
+    grid-row: 2/4;
+    background-image: url("imagelib/brand_pozu.png");
+    background-color: yellow;
+  }
 
-div.box p:nth-child(2) {
-  font-size:0.6em;
-}
+  .four:hover {
+    background: linear-gradient(rgba(99, 106, 124, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_pozu.png");
+    background-size: 100% auto;
+  }
 
-/************************
-/* Aside
-************************/
+  .five {
+    grid-column: 1;
+    grid-row: 3;
+    background-image: url("imagelib/brand_birdsong.png");
+    background-color: green;
+    /* incase image doesn't show */
+  }
 
-.aside {
-  display: flex; /* none */
-  min-width: 10vw;
-  max-width: 25vw;
-  color: white;
-  margin:auto;
-  margin-top:4px;
-  border: 5px solid #706f6f;
-  /* margin: 4px 15px 4px 10px; /* top right bottom left */
+  .five:hover {
+    background: linear-gradient(rgba(255, 65, 145, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_birdsong.png");
+    background-size: 100% auto;
+  }
 
-}
+  .six {
+    grid-column: 3;
+    grid-row: 1/3;
+    background-image: url("imagelib/brand_peopletree.png");
+    background-color: grey;
+  }
 
-.twitter-timeline {
-  /* max-height: 150vh;*/
-}
+  .six:hover {
+    background: linear-gradient(rgba(229, 105, 0, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_peopletree.png");
+    background-size: 100% auto;
+  }
+
+} /* End of query 4 */
+
+/* (Query 5) To be applied for larger widths only (above 900px) */
+
+@media(min-width:900px) {
+
+  div.text {
+    max-width: 65vw;
+    padding: 0% 2%; /* top right bottom left */
+  }
+
+  div.image {
+    max-width: 65vw;
+  }
+
+} /* End of query 5 */

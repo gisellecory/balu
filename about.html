@@ -13,143 +13,119 @@
   <!-- responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" type="text/css">
-
-  <!-- Font
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-
 
 </head>
 
 <body>
+  <main>
+    <header>
 
-    <main>
+      <!-- Navigation [see index.html for comments]-->
 
-      <header>
+      <nav class="fg-nav">
+        <div class="nav-section icon">
+          <div class="navitem"><a href="index.html"><img id="icon" src="imagelib/icon_small.png" alt="Balu Icon"></a></div>
+        </div>
+        <div class="nav-section pagelinks">
+          <div class="navitem"><a href="download.html">Download</a></div>
+          <div class="navitem"><a href="directory.html">Directory</a></div>
+          <div class="navitem current"><a href="about.html">About</a></div>
+        </div>
+      </nav>
 
-        <!-- Navigation -->
+    </header>
 
-        <nav class="fg-nav">
-          <div class="nav-section icon">
-            <div class="navitem"><a href="index.html"><img id="icon" src="imagelib/icon_small.png" alt="Balu Icon"></a></div>
+    <!-- Main content -->
+
+    <div class="container-master">
+
+      <div class="container-overall">
+
+        <div class="container-l1">  <!-- Page heading section -->
+          <div class="col l1 text">
+            <h1>We are Balu</h1>
           </div>
-          <div class="nav-section pagelinks">
-            <div class="navitem"><a href="download.html">Download</a></div>
-            <div class="navitem"><a href="directory.html">Directory</a></div>
-            <div class="navitem current"><a href="about.html">About</a></div>
-          </div>
-        </nav>
+        </div>
 
-      </header>
+        <div class="container-l1"> <!-- First container for main content -->
 
-<div class="container-master">
-
-        <div class="container-overall">
-
-<div class="container-l1">
-<div class="col l1 text">
-<h1>We are Balu</h1>
-</div>
-</div>
-
-          <div class="container-l1">
-            <div class="col l1 image">
-              <img class="feature-img" src="imagelib/group.png" alt="">
-            </div>
-
-            <div class="col l1 text">
-
-              <h2>Meet the team</h2>
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
-                <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
-                <p>Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
-                <p class="read-more"><a href="about.html">&gt;&gt; Learn more</a></p>
-</div>
-              </div>
-            </div>
-
-          <div class="container-l2">
-
-            <div class="col l2 image">
-              <img class="feature-img" src="imagelib/birdsong1.jpg" alt="">
-            </div>
-
-            <div class="col l2 text" id="left-pic-text">
-              <h2>Our story</h2>
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
-                <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
-                <p>Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
-                <p class="read-more"><a href="directory.html">&gt;&gt; See our directory</a></p>
-              </div>
-            </div>
-
+          <div class="col l1 image">
+            <img class="feature-img" src="imagelib/group.png" alt="">
           </div>
 
-
-          <div class="container-l3">
-
-            <div class="col l3 image">
-              <img class="feature-img" src="imagelib/birdsong1.jpg" alt="">
+          <div class="col l1 text">
+            <h2>Our story</h2>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
+              <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
+              <p>This is our story:</p>
+              <ul class="story">
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Morbi ullamcorper erat a libero hendrerit molestie.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Morbi ullamcorper erat a libero hendrerit molestie.</li>
+              </ul>
+              <p></p> <!-- Cheeky bit of white space -->
+              <p>Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
+              <p class="read-more"><a href="directory.html">&gt;&gt; See our directory</a></p>
             </div>
+          </div>
+        </div>
 
-            <div class="col l3 text">
-              <h2>Get in touch</h2>
+        <div class="container-l2"> <!-- Second container for main content -->
 
-              <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
-                <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
-                <p>
-                  Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
-                <p class="read-more"><a href="download.html">&gt;&gt; Download</a></p>
-              </div>
-            </div>
-
+          <div class="col l2 image">
+            <img class="feature-img" src="imagelib/birdsong1.jpg" alt="">
           </div>
 
-          <div class="container-l4">
+          <div class="col l2 text">
+            <h2>Get in touch</h2>
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper erat a libero hendrerit molestie.</p>
+              <p>Vivamus massa est, lobortis eget nulla posuere, iaculis pellentesque nisl. Fusce nunc felis, tempor eu nisl ut, lacinia suscipit nibh.</p>
+              <p>Phasellus nec velit pellentesque nunc porta ullamcorper et eu nisi. Nulla imperdiet ex at ante egestas, et fringilla diam varius.</p>
+              <p class="read-more"><a href="download.html">&gt;&gt; Download</a></p>
+            </div>
+          </div>
+        </div>
 
-            <div class="col l4 image" id="social">
-              <ul class="social-link">
-                <div class="socmed-container-l1">
+        <div class="container-l4"> <!-- Fourth container: social media icons (Note: no l3 container on this page) -->
+
+          <div class="col l4 image" id="social">
+            <ul class="social-link">
+              <div class="socmed-container-l1">
                 <div class="socmed-container-l2">
-                <li class="social-img facebook"> <a href="https://www.facebook.com/baluHQ/" target="_blank"></a></li>
-                <li class="social-img mailto"><a href="mailto:info@getbalu.org" target="_blank"></a></li>
-</div>
-<div class="socmed-container-l2">
-                <li class="social-img twitter"><a href="https://twitter.com/BaluHQ" target="_blank"></a></li>
-                <li class="social-img instagram"><a href="https://www.instagram.com/balu_hq/" target="_blank"></a></li>
+                  <li class="social-img facebook"> <a href="https://www.facebook.com/baluHQ/" target="_blank"></a></li>
+                  <li class="social-img mailto"><a href="mailto:info@getbalu.org" target="_blank"></a></li>
+                </div>
+                <div class="socmed-container-l2">
+                  <li class="social-img twitter"><a href="https://twitter.com/BaluHQ" target="_blank"></a></li>
+                  <li class="social-img instagram"><a href="https://www.instagram.com/balu_hq/" target="_blank"></a></li>
                 </div>
               </div>
-              </ul>
-            </div>
+            </ul>
           </div>
-</div>
-
-<div class="aside">
-
-  <a class="twitter-timeline" data-lang="en" data-theme="light" data-link-color="#19CF86" data-width="300" data-height="1500"
-href="https://twitter.com/BaluHQ?ref_src=twsrc%5Etfw">Tweets by BaluHQ</a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
+        </div>
       </div>
 
-      <footer>
+      <div class="aside"> <!-- Aside: Twitter feed -->
+        <a class="twitter-timeline" data-lang="en" data-theme="light" data-link-color="#19CF86" data-width="300" data-height="1500" href="https://twitter.com/BaluHQ?ref_src=twsrc%5Etfw">Tweets by BaluHQ</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
 
-        <p class="icon-attribution">
-          This site is published under a Creative Commons license. Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>, and licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-            title="Creative Commons BY 3.0" target="_blank">Creative Commons</a></p>
+    </div>
 
+    <footer> <!-- Footer: copyright notice and icon attribution -->
 
-      </footer>
-    </main>
+      <p class="icon-attribution">
+        This site is published under a Creative Commons license. Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>, and licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">Creative Commons</a></p>
 
+    </footer>
 
+  </main>
 </body>
-
 </html>

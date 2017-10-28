@@ -37,6 +37,15 @@ p:first-child {
   display: flex;
 }
 
+ul.story {
+  display:none;
+}
+
+div.text {
+  margin: 1% 2%;
+  padding: 5px 5px;
+}
+
 /************************
 Headings
 ************************/
@@ -87,6 +96,10 @@ Read-more
   text-decoration: none;
   background-color: rgb(43, 216, 197);
   color: white;
+}
+
+p.read-more {
+  display:flex;
 }
 
 /************************
@@ -202,12 +215,6 @@ Images
 
 div.image {
   display: block;
-}
-
-div.text {
-  order: 1;
-  margin: 1% 2%;
-  padding: 5px 5px;
 }
 
 /************************
@@ -339,11 +346,11 @@ div.wrapper {
   display: block;
   padding: 50px 0px 40px 0px;
   max-width: 100vw;
+  min-width: 70vw;
 }
 
 div.box {
-  padding: 0px 10px 0px 30px;
-  /* top right bottom left */
+  padding: 0px 10px 0px 30px; /* top right bottom left */
   background-size: auto 100%;
   margin: 10px 10px;
 }
@@ -357,10 +364,12 @@ div.box a {
 /* Font size for text within grid */
 div.box p:first-child {
   font-size: 1em;
+  text-align:left;
 }
 
 div.box p:nth-child(2) {
   font-size: 0.6em;
+  text-align:left;
 }
 
 /* Grid colours */
@@ -432,6 +441,10 @@ p.download {
     display: flex;
   }
 
+  ul.story {
+    display:block;
+  }
+
   div.container-master {
     margin: 20px 40px;
   }
@@ -441,6 +454,15 @@ p.download {
 /* (Query 4) To be applied for larger widths only (above 750px) */
 
 @media(min-width:750px) {
+
+  div.text {
+    max-width: 65vw;
+    padding: 0% 2%; /* top right bottom left */
+  }
+
+  div.image {
+    max-width: 65vw;
+  }
 
   /* Display Twitter feed */
   .aside {
@@ -456,6 +478,7 @@ p.download {
     grid-auto-rows: minmax(200px, auto);
     padding: 50px 0px 40px 0px;
     max-width: 100vw;
+    min-width: 70vw;
   }
 
   div.box {
@@ -490,12 +513,13 @@ p.download {
   .one {
     grid-column: 2;
     grid-row: 1;
-    background-image: url("imagelib/brand_brothers.png");
+    background-image: url("imagelib/brand_brothers.jpg");
     background-color: pink; /* colours here are in case images do not appear */
   }
 
   .one:hover {
-    background: linear-gradient(rgba(232, 163, 86, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_brothers.png");
+    background: linear-gradient(rgba(232, 163, 86, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_brothers.jpg");
+    background-color: pink; /* colours here are in case images do not appear */
   }
 
   .two {
@@ -508,6 +532,7 @@ p.download {
   .two:hover {
     background: linear-gradient(rgba(116, 144, 22, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_howies.png");
     background-size: 100% auto;
+    background-color: red;
   }
 
   .three {
@@ -520,6 +545,7 @@ p.download {
   .three:hover {
     background: linear-gradient(rgba(255, 194, 141, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_mayamiko.png");
     background-size: 100% auto;
+    background-color: blue;
   }
 
   .four {
@@ -532,6 +558,7 @@ p.download {
   .four:hover {
     background: linear-gradient(rgba(99, 106, 124, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_pozu.png");
     background-size: 100% auto;
+    background-color: yellow;
   }
 
   .five {
@@ -539,12 +566,12 @@ p.download {
     grid-row: 3;
     background-image: url("imagelib/brand_birdsong.png");
     background-color: green;
-    /* incase image doesn't show */
   }
 
   .five:hover {
     background: linear-gradient(rgba(255, 65, 145, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_birdsong.png");
     background-size: 100% auto;
+    background-color: green;
   }
 
   .six {
@@ -557,21 +584,7 @@ p.download {
   .six:hover {
     background: linear-gradient(rgba(229, 105, 0, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_peopletree.png");
     background-size: 100% auto;
+    background-color: grey;
   }
 
 } /* End of query 4 */
-
-/* (Query 5) To be applied for larger widths only (above 900px) */
-
-@media(min-width:900px) {
-
-  div.text {
-    max-width: 65vw;
-    padding: 0% 2%; /* top right bottom left */
-  }
-
-  div.image {
-    max-width: 65vw;
-  }
-
-} /* End of query 5 */

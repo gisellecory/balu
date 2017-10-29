@@ -53,7 +53,18 @@
 
         <div class="container-l1"> <!-- First container for main content -->
           <div class="col l1 image">
-            <img class="feature-img" src="imagelib/devices.jpg" alt="">
+
+            <img class="feature-img"
+            sizes="(max-width: 1400px) 100vw, 1400px"
+            srcset="
+            imagelib/devices_set/devices_td9cr8_c_scale,w_200.jpg 200w,
+            imagelib/devices_set/devices_td9cr8_c_scale,w_643.jpg 643w,
+            imagelib/devices_set/devices_td9cr8_c_scale,w_938.jpg 938w,
+            imagelib/devices_set/devices_td9cr8_c_scale,w_1194.jpg 1194w,
+            imagelib/devices_set/devices_td9cr8_c_scale,w_1400.jpg 1400w"
+            src="imagelib/devices_set/devices_td9cr8_c_scale,w_1400.jpg"
+            alt="">
+
           </div>
 
           <div class="col l1 text">

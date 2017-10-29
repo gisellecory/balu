@@ -1,12 +1,7 @@
-/* Style sheet for Balu project, Cardiff, October 2017 */
+/* Style sheet for Balu project, Cardiff, October 2017
+This CSS is written for mobile-first, i.e. max-wdtih:400px*/
 
-/* Notes:
-This CSS is written for mobile-first, i.e. max-wdtih:400px
-*/
-
-/************************
-Remove default browser settings
-************************/
+/* Remove default browser settings */
 
 * {
   margin: 0;
@@ -16,9 +11,7 @@ Remove default browser settings
   box-sizing: border-box;
 }
 
-/************************
-Default text options (across the site)
-************************/
+/* Default text options (across the site) */
 
 html {
   font-size: 14px;
@@ -46,9 +39,11 @@ div.text {
   padding: 5px 5px;
 }
 
-/************************
-Headings
-************************/
+p.download {
+  display: inline-block;
+}
+
+/* Headings */
 
 h1, h2 {
   color: rgb(43, 216, 197); /* Balu blue */
@@ -63,9 +58,7 @@ h2 {
   font-size: 1.5em;
 }
 
-/************************
-Lists
-************************/
+/* Lists */
 
 ul.dirlist-mobile {
   list-style: none;
@@ -83,9 +76,7 @@ ul.story {
   margin-left: 1vw;
 }
 
-/************************
-Read-more
-************************/
+/* Read-more */
 
 .read-more a:link, .read-more a:visited {
   text-decoration: none;
@@ -102,9 +93,7 @@ p.read-more {
   display:flex;
 }
 
-/************************
-Social media
-************************/
+/* Social media */
 
 /* attributes common to all social media images go here */
 
@@ -129,7 +118,7 @@ Social media
 .instagram:hover { background-image: url("imagelib/instagram_black.png"); }
 
 li.social-img {
-  margin: 0% 4% 0% 4%; /* top right bottom left */
+  margin: 0% 4% 0% 4%;
 }
 
 ul.social-link {
@@ -165,9 +154,7 @@ div.socmed-container-l2 {
   flex-direction: row;
 }
 
-/************************
-Body and containers
-************************/
+/* Body and containers */
 
 body {
   width: 100vw;
@@ -202,9 +189,7 @@ div.container-overall, div.container-master {
   background-color: white;
 }
 
-/************************
-Images
-************************/
+/* Images */
 
 .feature-img {
   display: block;
@@ -217,9 +202,7 @@ div.image {
   display: block;
 }
 
-/************************
- /* Footer
- ************************/
+/* Footer */
 
 footer {
   background-color: #706f6f;
@@ -231,7 +214,7 @@ footer p.icon-attribution {
   font-style: italic;
   font-size: 0.9em;
   color: white;
-  padding: 5% 5% 5% 5%; /* top right bottom left */
+  padding: 5% 5% 5% 5%;
   display: inline-block;
 }
 
@@ -244,9 +227,7 @@ footer a:hover, footer a:active {
   color: #706f6f;
 }
 
-/************************
-/* Navigation
-************************/
+/* Navigation */
 
 .fg-nav {
   display: flex;
@@ -263,10 +244,8 @@ footer a:hover, footer a:active {
   text-align: center;
   flex-direction: row;
   font-size: 1em;
-  padding: 3px 3px;
-  /* so will be included within hover effects */
+  padding: 3px 3px;  /* so will be included within hover effects */
   margin: 0.5vh 1.5vw;
-  /* top and bottom, left and right */
 }
 
 .nav-section {
@@ -290,9 +269,7 @@ div.current a {
   background-color: rgb(43, 216, 197);
 }
 
-/************************
-/* Aside
-************************/
+/* Aside */
 
 .aside {
   display: none;
@@ -304,9 +281,7 @@ div.current a {
   border: 5px solid #706f6f;
 }
 
-/************************
-/* Pinned element
-************************/
+/* Pinned element */
 
 .pinned {
   display: none;
@@ -331,9 +306,7 @@ div.current a {
   text-decoration: none;
 }
 
-/************************
-/* Grid (directory) - on mobile
-************************/
+/* Grid (directory) - on mobile */
 
 section.container-grid {
   display: flex;
@@ -350,7 +323,7 @@ div.wrapper {
 }
 
 div.box {
-  padding: 0px 10px 0px 30px; /* top right bottom left */
+  padding: 0px 10px 0px 30px;
   background-size: auto 100%;
   margin: 10px 10px;
 }
@@ -380,21 +353,9 @@ div.box p:nth-child(2) {
 .five { background-color: #fcf0bf; }
 .six { background-color: #d9b9eb; }
 
-/************************
-Miscellanous bits
-************************/
-
-p.download {
-  display: inline-block;
-}
-
-/************************
-************************
 /* MEDIA QUERIES - for screen widths above 400px
-************************
-************************/
 
-/* (Query 1) To be applied at all widths above 400px */
+(Query 1) To be applied at all widths above 400px */
 
 @media(min-width:400px) {
 
@@ -415,7 +376,7 @@ p.download {
     display: flex;
 }
 
-} /* End of query 1 */
+}
 
 /* (Query 2) To be applied for medium widths only (400-600px) */
 
@@ -430,7 +391,7 @@ p.download {
     font-size: 1em;
   }
 
-} /* End of query 2 */
+}
 
 /* (Query 3) To be applied for larger widths only (above 600px) */
 
@@ -449,7 +410,7 @@ p.download {
     margin: 20px 40px;
   }
 
-} /* End of query 3 */
+}
 
 /* (Query 4) To be applied for larger widths only (above 750px) */
 
@@ -457,7 +418,7 @@ p.download {
 
   div.text {
     max-width: 65vw;
-    padding: 0% 2%; /* top right bottom left */
+    padding: 0% 2%;
   }
 
   div.image {
@@ -587,4 +548,4 @@ p.download {
     background-color: grey;
   }
 
-} /* End of query 4 */
+}

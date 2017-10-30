@@ -19,8 +19,10 @@ html {
 }
 
 p {
-  display: none; /* No p elements displayed by default - display property used to show elements depending on screen width */
-  color: rgb(61, 58, 49); /* charcoal */
+  display: none;
+  /* No p elements displayed by default - display property used to show elements depending on screen width */
+  color: rgb(61, 58, 49);
+  /* charcoal */
   padding: 1%;
   text-align: justify;
   font-size: 1.2em;
@@ -31,7 +33,7 @@ p:first-child {
 }
 
 ul.story {
-  display:none;
+  display: none;
 }
 
 div.text {
@@ -46,7 +48,8 @@ p.download {
 /* Headings */
 
 h1, h2 {
-  color: rgb(43, 216, 197); /* Balu blue */
+  color: rgb(43, 216, 197);
+  /* Balu blue */
 }
 
 h1 {
@@ -90,7 +93,7 @@ ul.story {
 }
 
 p.read-more {
-  display:flex;
+  display: flex;
 }
 
 /* Social media */
@@ -98,6 +101,7 @@ p.read-more {
 /* attributes common to all social media images go here */
 
 /* list items containing social media images */
+
 .social-img {
   padding: 2px;
   min-width: 70px;
@@ -108,14 +112,38 @@ p.read-more {
 }
 
 /* social media icons */
-.facebook { background-image: url("imagelib/facebook.png"); }
-.facebook:hover { background-image: url("imagelib/facebook_black.png"); }
-.mailto { background-image: url("imagelib/email.png"); }
-.mailto:hover { background-image: url("imagelib/email_black.png"); }
-.twitter { background-image: url("imagelib/twitter.png"); }
-.twitter:hover { background-image: url("imagelib/twitter_black.png"); }
-.instagram { background-image: url("imagelib/instagram.png"); }
-.instagram:hover { background-image: url("imagelib/instagram_black.png"); }
+
+.facebook {
+  background-image: url("imagelib/facebook.png");
+}
+
+.facebook:hover {
+  background-image: url("imagelib/facebook_black.png");
+}
+
+.mailto {
+  background-image: url("imagelib/email.png");
+}
+
+.mailto:hover {
+  background-image: url("imagelib/email_black.png");
+}
+
+.twitter {
+  background-image: url("imagelib/twitter.png");
+}
+
+.twitter:hover {
+  background-image: url("imagelib/twitter_black.png");
+}
+
+.instagram {
+  background-image: url("imagelib/instagram.png");
+}
+
+.instagram:hover {
+  background-image: url("imagelib/instagram_black.png");
+}
 
 li.social-img {
   margin: 0% 4% 0% 4%;
@@ -135,15 +163,17 @@ ul.social-link {
 }
 
 /* outer container for social media icons */
+
 #social {
   display: flex;
   flex-direction: row;
 }
 
 /* inner containers for social media icons - to create a row or grid depending on screen width */
+
 div.socmed-container-l1, div.socmed-container-l2 {
   display: flex;
-  padding: 10px;
+  padding: 10px 2px;
 }
 
 div.socmed-container-l1 {
@@ -177,7 +207,8 @@ div.container-overall, div.container-master {
   margin: 4px 10px;
 }
 
-.container-l4, .container-l1 { /* maintain symmetry at top and bottom of page */
+.container-l4, .container-l1 {
+  /* maintain symmetry at top and bottom of page */
   padding-bottom: 1vh;
 }
 
@@ -215,7 +246,7 @@ footer p.icon-attribution {
   font-size: 0.9em;
   color: white;
   padding: 5% 5% 5% 5%;
-  display: inline-block;
+  display: block;
 }
 
 footer a:link, footer a:visited {
@@ -244,7 +275,8 @@ footer a:hover, footer a:active {
   text-align: center;
   flex-direction: row;
   font-size: 1em;
-  padding: 3px 3px;  /* so will be included within hover effects */
+  padding: 3px 3px;
+  /* so will be included within hover effects */
   margin: 0.5vh 1.5vw;
 }
 
@@ -335,103 +367,110 @@ div.box a {
 }
 
 /* Font size for text within grid */
+
 div.box p:first-child {
   font-size: 1em;
-  text-align:left;
+  text-align: left;
 }
 
 div.box p:nth-child(2) {
   font-size: 0.6em;
-  text-align:left;
+  text-align: left;
 }
 
 /* Grid colours */
-.one { background-color: #ffcfd8; }
-.two { background-color: #fcf0bf; }
-.three { background-color: #d9b9eb; }
-.four { background-color: #ffcfd8; }
-.five { background-color: #fcf0bf; }
-.six { background-color: #d9b9eb; }
+
+.one {
+  background-color: #ffcfd8;
+}
+
+.two {
+  background-color: #fcf0bf;
+}
+
+.three {
+  background-color: #d9b9eb;
+}
+
+.four {
+  background-color: #ffcfd8;
+}
+
+.five {
+  background-color: #fcf0bf;
+}
+
+.six {
+  background-color: #d9b9eb;
+}
 
 /* MEDIA QUERIES - for screen widths above 400px
 
 (Query 1) To be applied at all widths above 400px */
 
 @media(min-width:400px) {
-
   ul.social-link, .fg-nav, .nav-section, div.socmed-container-l1 {
     flex-direction: row;
   }
-
   div.navitem, div.navitem a {
     font-size: 1.2em;
-    padding: 1vh 1vw; /* Note: padding will be included within hover effects */
+    padding: 1vh 1vw;
+    /* Note: padding will be included within hover effects */
     margin: 2vh 2vw;
   }
-
   h1 {
     font-size: 2em;
   }
   .pinned {
     display: flex;
-}
-
+  }
 }
 
 /* (Query 2) To be applied for medium widths only (400-600px) */
 
 @media(min-width:400px) and (max-width:600px) {
-
   /* Display second paragraph in each div */
   p:nth-child(2) {
     display: flex;
   }
-
   div.navitem {
     font-size: 1em;
   }
-
 }
 
 /* (Query 3) To be applied for larger widths only (above 600px) */
 
 @media(min-width:600px) {
-
   /* Display all paragraphs in each div */
   p:nth-child(n) {
     display: flex;
   }
-
   ul.story {
-    display:block;
+    display: block;
   }
-
   div.container-master {
     margin: 20px 40px;
   }
-
 }
 
 /* (Query 4) To be applied for larger widths only (above 750px) */
 
 @media(min-width:750px) {
-
   div.text {
     max-width: 65vw;
     padding: 0% 2%;
   }
-
   div.image {
     max-width: 65vw;
   }
-
   /* Display Twitter feed */
   .aside {
     display: flex;
   }
-
+  div.container-master {
+    flex-direction: row;
+  }
   /* Grid (directory) - desktop */
-
   div.wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -441,111 +480,95 @@ div.box p:nth-child(2) {
     max-width: 100vw;
     min-width: 70vw;
   }
-
   div.box {
     background-size: auto 100%;
     text-align: center;
     padding: 10px;
     margin: 0px;
   }
-
   div.box a {
     display: block;
     text-decoration: none;
     line-height: 30px;
     font-size: 25px;
   }
-
   div.box a p {
-    color: rgba(0, 0, 0, 0); /* makes text invisible */
+    color: rgba(0, 0, 0, 0);
+    /* makes text invisible */
     text-align: left;
   }
-
   div.box:hover a p {
     color: white;
   }
-
   div.box:hover {
     background-size: auto 100%;
   }
-
-/* Grid images and hover effects */
-
+  /* Grid images and hover effects */
   .one {
     grid-column: 2;
     grid-row: 1;
     background-image: url("imagelib/brand_brothers.jpg");
-    background-color: pink; /* colours here are in case images do not appear */
+    background-color: pink;
+    /* colours here are in case images do not appear */
   }
-
   .one:hover {
     background: linear-gradient(rgba(232, 163, 86, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_brothers.jpg");
-    background-color: pink; /* colours here are in case images do not appear */
+    background-color: pink;
+    /* colours here are in case images do not appear */
   }
-
   .two {
     grid-column: 1;
     grid-row: 1/3;
     background-image: url("imagelib/brand_howies.png");
     background-color: red;
   }
-
   .two:hover {
     background: linear-gradient(rgba(116, 144, 22, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_howies.png");
     background-size: 100% auto;
     background-color: red;
   }
-
   .three {
     grid-column: 3;
     grid-row: 3;
     background-image: url("imagelib/brand_mayamiko.png");
     background-color: blue;
   }
-
   .three:hover {
     background: linear-gradient(rgba(255, 194, 141, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_mayamiko.png");
     background-size: 100% auto;
     background-color: blue;
   }
-
   .four {
     grid-column: 2;
     grid-row: 2/4;
     background-image: url("imagelib/brand_pozu.png");
     background-color: yellow;
   }
-
   .four:hover {
     background: linear-gradient(rgba(99, 106, 124, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_pozu.png");
     background-size: 100% auto;
     background-color: yellow;
   }
-
   .five {
     grid-column: 1;
     grid-row: 3;
     background-image: url("imagelib/brand_birdsong.png");
     background-color: green;
   }
-
   .five:hover {
     background: linear-gradient(rgba(255, 65, 145, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_birdsong.png");
     background-size: 100% auto;
     background-color: green;
   }
-
   .six {
     grid-column: 3;
     grid-row: 1/3;
     background-image: url("imagelib/brand_peopletree.png");
     background-color: grey;
   }
-
   .six:hover {
     background: linear-gradient(rgba(229, 105, 0, 0.45), rgba(43, 216, 197, 0.45)), url("imagelib/brand_peopletree.png");
     background-size: 100% auto;
     background-color: grey;
   }
-
 }

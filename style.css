@@ -451,6 +451,9 @@ div.box p:nth-child(2) {
   div.container-master {
     margin: 20px 40px;
   }
+  div.container-l1 {
+    min-width: 100%;
+  }
 }
 
 /* (Query 4) To be applied for larger widths only (above 750px) */
